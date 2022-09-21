@@ -1,0 +1,344 @@
+
+
+.contenedor {
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0;
+}
+
+.titulo {
+    color: orange;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* Header */
+header {
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(90deg, #fcff9e 0%, #c67700 100%);
+    position: relative;
+    top: -30px;
+    
+   .textos-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    
+
+    h1{
+        font-size: 50px;
+        color:#fff;
+    }
+    h2{
+        font-size: 30px;
+        font-weight: 300;
+        color:#fff;
+       }
+    }    
+    &.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+ }
+}
+
+
+    
+/* About us */
+.main-info div{
+    margin-top: 0;
+    width: 100%;
+    height: 500px;
+    display: inline-block;
+    padding:1.5rem 1.5rem ;
+    border-radius: 20px;
+    align-items: center;
+    
+    position: relative;
+
+    .main-img{
+        width: 40%;
+    
+    
+        
+    
+           
+    }  
+
+    &.main-info{
+        width: 50%; 
+        height: 50;
+        
+        
+        h1{
+            text-align: center;
+            font-size: 40px;
+            color: rgb(255, 217, 0);
+            
+            
+        }  
+        p{
+            font-size: 1.2rem;
+            color: #000;
+        }
+    }
+    
+   
+        
+}
+
+/* Clients */
+
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cards .card{
+   
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
+    display: flex;
+    width: 46%;
+    height: 200px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+}
+
+.cards .card img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: block;
+}
+
+.cards .card > .contenido-texto-card{
+    width: 60%;
+    color: #fff;
+}
+
+.cards .card > .contenido-texto-card p{
+    font-weight: 300;
+    padding-top: 5px;
+}
+
+/*  Our team */
+
+.about-services{
+    background: #f2f2f2;
+    padding-bottom: 30px;
+}
+
+
+.servicio-cont{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.servicio-ind{
+    width: 28%;
+    text-align: center;
+}
+
+.servicio-ind img{
+    width: 90%;
+}
+
+.servicio-ind h3{
+    margin: 10px 0;
+}
+
+.servicio-ind p{
+    font-weight: 300;
+    text-align: justify;
+}
+
+/* footer */
+
+footer{
+    background: linear-gradient(90deg, #fcff9e 0%, #c67700 100%);
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+   
+}
+
+.contenedor-footer{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+   
+}
+
+.content-foo{
+    text-align: center;
+}
+
+.content-foo h4{
+    color: rgb(0, 0, 0);
+    border-bottom: 5px solid #fccf07;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+.content-foo p{
+    color: rgb(0, 0, 0);
+}
+
+.titulo-final{
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: #000000;
+}
+
+@media screen and (max-width:900px){
+    header{
+        background-position: center;
+    }
+
+    .main-info{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        h1{
+            font-size: 30px;
+        }
+        p{
+            font-size: 0.2rem;
+        }
+    }
+
+
+    .imagen-about-us{
+        width: 40%;
+    }
+
+    /* Clientes */
+
+    .cards{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cards .card{
+        width: 90%;
+    }
+
+    .cards .card:first-child{
+        margin-bottom: 30px;
+    }
+
+    /* servicios */
+
+    .servicio-cont{
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .servicio-ind{
+        width: 100%;
+        text-align: center;
+    }
+
+    .servicio-ind:nth-child(1), .servicio-ind:nth-child(2){
+        margin-bottom: 60px;
+    }
+
+    .servicio-ind img{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:500px){
+   
+
+    .textos-header h1{
+        font-size: 35px;
+    }
+
+    .textos-header h2{
+        font-size: 20px;
+    }
+
+    /* ABOUT US */
+
+    .main-info{
+        flex-direction: columns;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        h1{
+            font-size: 30px;
+        }
+        p{
+            font-size: 0.1rem;
+        }
+    }
+
+    .main-img{
+        width: 30%;
+    }
+
+
+    /* Clients */
+
+    .cards .card{
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards .card img{
+        width: 90px;
+        height: 90px;
+    }
+
+    /* Footer */
+
+    .contenedor-footer{
+        flex-direction: column;
+        border: none;
+        
+    }
+
+    .content-foo{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .content-foo h4{
+        border: none;
+    }
+
+    .content-foo p{
+        color: rgb(0, 0, 0);
+        border-bottom: 1px solid #000000;
+        padding-bottom: 20px;
+    }
+
+    .titulo-final{
+        font-size: 20px;
+    }
+}

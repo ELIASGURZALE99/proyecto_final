@@ -1,300 +1,212 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box; }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    font-family: 'Anton', sans-serif;
-    
-}
- 
-.nav{
-    background: rgb(0,0,0,0.5);
-    height: 80px;
-    color: #fff;
-    padding: 0 35px;
-    box-shadow: 0px 3px 10px rgb(0,0,0,0.3);
-}
+body {
+  font-family: sans-serif;
+  color: white;
+  height: 100vh;
+  overflow: hidden; }
 
-.nav_container{
-    display: flex;
-    height: 100%;
-    width: 90%;
-    margin-top: 0;
-   justify-content: space-between;
-   align-items: center; 
-}
-
-.nav_logo{
-
-    width: 70px;
-    height: 80px;
-    
-}
-.nav_logo:hover{
-    background: darkorange;
-    border-radius: 50%;
-    width: 90px;
-    height: 90px;
-}
-
-.nav_img{
-    color: #fff;
-    width: 70px;
-    height:70px ;
-}
-
-
-.nav_menu{
-    display: grid;
-    grid-auto-flow: column;
-    gap: 3em;
-}
-.nav_items{
-    color: #fff;
-    text-decoration: none;
-   
-}
-.nav_items:hover{
-    color: darkorange;
-}
-
-
-.nav_input:checked + .nav_menu{
-    background: rgb(0,0,0,0.5);
-    
-}
-.nav_label, .nav_input{
-   display: none;
-}
-video{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -2;
-
-
- }
-
- .overlay{
- position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    background: rgb(0,0,0,0.5);
-    z-index: -1;
- }
-
- .container{
-    margin: 200px 80px 0 80px;
- }
-
- .container h2{
-    color: #fff;
-    font-size: 3em;
-    font-weight: 700;
-    text-transform:uppercase ;
-    word-spacing: 7px;
- }
-
- .container p{
-    color: #fff;
-    font-size: 1.1em;
-    font-weight: 400;
-    width: 50%;
-    padding-bottom: 25px;   
- }
-
- .container a{
-    color:#000;
-    font-size: 1.1em;
-    font-weight: 500;
-    background:#fff;
-    padding: 10px 25px;
-    text-decoration: none;
-    border-radius: 15px;     
- }
-
- .container a:hover{
-    color:#fff;
-    background:darkorange;
-    padding: 15px 20px;
-    transition: 0.2s;
-
- }
-
- .follow{
+nav {
+  background: rgba(0, 0, 0, 0.425);
+  height: 100px;
+  width: 100%;
+  padding: 0 50px;
+  box-shadow: 0px 3px 10px rgbrgba(0, 0, 0, 0.137);
+  z-index: 3; }
+  nav img {
+    height: 120px;
+    width: 120px; }
+  nav ul {
     float: right;
-    margin:50px 90px 0 0 ;
-
- }
- .follow .icon{
-    display: flex;
-    flex-direction:row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
- }
- .follow .icon li{
- list-style: none;
- padding-left: 40px;
-}
-
- .follow .icon li i{
-    font-size: 1.4em;
-    width: 50px;
-    height: 50px;
-    background: #fff;
-    border-radius: 50%;
-    align-items: center;
-    text-align: center;
-    padding: 15px;
-    transition: 0.3;
- }
-
- .follow .icon li i:hover{
-    color: #fff;
-    background:darkorange ;
-    transform: rotate(100deg);
+    margin-right: 20px; }
+    nav ul li {
+      display: inline-block;
+      line-height: 80px;
+      margin: 0 15px; }
+      nav ul li a {
+        color: white;
+        font-size: 17px;
+        text-transform: uppercase;
+        padding: 7px 13px;
+        border-radius: 3px; }
+      nav ul li a:hover {
+        color: orange;
+        transition: 0.5s;
+        font-size: 25px; }
+  nav .checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
     cursor: pointer;
-
-
-
-
- }
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 800px) {
-    .nav_label{
+    display: none; }
+  nav #check {
+    display: none; }
+  @media (max-width: 952px) {
+    nav a {
+      font-size: 16px; } }
+  @media (max-width: 858px) {
+    nav .checkbtn {
+      display: block; }
+    nav ul {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #fa9109;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all 0.5;
+      z-index: 2; }
+      nav ul li {
         display: block;
-        cursor: pointer;    
-    }
-    .nav_menu{
-        position: fixed;
-        top: 80px;
-        bottom: 0;
-        background: rgba(255, 140, 0, 0.671);
-        width: 100%;
-        left:0 ;
-        display: flex;
-        justify-content: space-evenly;
-        flex-direction: column;
-        align-items: center;
-        clip-path: circle(0 at center);
-      transition: clip-path 1s  ease-in-out;
-    }
+        margin: 50px 0;
+        line-height: 30px; }
+        nav ul li a {
+          font-size: 28px; }
+        nav ul li a:hover {
+          background: none;
+          color: lightcoral; }
+    nav #check:checked ~ ul {
+      left: 0; } }
 
-    .nav_input:checked + .nav_menu{
-        clip-path: circle(100% at center);
-    }
+.background {
+  position: relative;
+  height: 100vh; }
+  .background video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2; }
 
-    .nav_logo{
-        width: 60px;;
-    }
+#container {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  #container h1 {
+    font-size: 3rem;
+    font-weight: bold; }
+  #container p {
+    font-size: 0.8rem;
+    font-weight: normal; }
+  #container button {
+    background: rgba(194, 129, 8, 0.637);
+    border: none;
+    padding: 0.9rem 3rem;
+    margin: 3rem;
+    color: white; }
 
-.container{
-    margin: 50px 50px 0 50px;
- }
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 60px;
+  z-index: 10; }
 
- .container h2{
-    font-size: 2.2em;
-    font-weight:600;
+.container:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: url("../img/spartafit.jpg") no-repeat center;
+  background-size: cover;
+  filter: blur(50px);
+  z-index: -1; }
 
- }
- .container p{
-    font-size: 1.3em;
-    font-weight: 300;
-    width: 50%;
-    padding-bottom: 15px;   
- }
- 
+.contact-box {
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #000000;
+  box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
+  position: absolute;
+  top: 20px; }
 
+.left {
+  background: url("../img/spartafit.jpg") no-repeat center;
+  background-size: cover;
+  height: 100%; }
 
-} 
-@media (max-width: 500px){
-.container h2{
-    
-    font-size: 1.5em;
-    font-weight: 450;
-    text-transform:uppercase ;
-    word-spacing: 3px;
- }
-.container p{
-    font-size: 0.8em;
-    font-weight: 300;
-    width: 70%;
-    height:50% ;
-    padding-bottom: 15px; 
-    word-spacing: px;
- }
- .container a{
-    color:#000;
-    font-size: 0.9em;
-    font-weight: 300;
-    padding: 10px 20px;}
+.right {
+  padding: 25px 40px; }
 
-    .container{
-        text-align: center;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
+h2 {
+  font-size: 50px;
+  font-family: 'Bellefair', serif;
+  font-weight: 400;
+  margin-bottom: 70px;
+  text-transform: uppercase;
+  position: relative;
+  padding: 0 0 10px;
+  margin-bottom: 10px; }
 
-    .follow{
-        
-        float: center;
-        margin:20px 35px 0 0 ;
-        
-    }
-    
-}
- 
-.grid{
-    outline: 4px solid #fff;
-width: 80%;
-height: 500px;
-margin: 10px auto;
-display: grid;
-grid-template-columns: repeat(3,1fr);
-grid-template-rows: repeat(3,1fr);
-grid-area:
-"n1 n2 n3"
-"n1 n2 n3"
-"n1 n2 n3";
+h2:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 50px;
+  border-radius: 2px;
+  background-color: orange; }
 
-gap: 15px
-;
-}
- .item{
-    font-size: 2rem;
-    color: #000;
-    font-family: sans-serif;
-    text-align: center;
- }
+.field {
+  width: 100%;
+  border: 2px solid rgba(0, 0, 0, 0);
+  outline: none;
+  background-color: white;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  margin-bottom: 22px;
+  transition: .3s; }
 
- .item1{
-    background-color: red;
+.field:hover {
+  background-color: rgba(255, 255, 255, 0.719); }
 
- }
- .item2{
-    background-color: rgb(0,0,0,0.3);
- }
- .item3{
-    background-color: yellow;
+textarea {
+  min-height: 150px; }
 
- }
+.btn {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: orange;
+  color: #fff;
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: .3s; }
+
+.btn:hover {
+  background-color: orange;
+  font-size: 1.6rem; }
+
+.field:focus {
+  border: 2px solid orange;
+  background-color: white; }
+
+@media screen and (max-width: 880px) {
+  .contact-box {
+    grid-template-columns: 1fr; }
+  .left {
+    height: 200px; } }
