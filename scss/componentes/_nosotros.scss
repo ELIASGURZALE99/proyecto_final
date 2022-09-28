@@ -3,7 +3,7 @@
 .contenedor {
     padding: 60px 0;
     width: 90%;
-    max-width: 1000px;
+    max-width: 2500px;
     margin: auto;
     overflow: hidden;
     padding: 0;
@@ -54,46 +54,39 @@ header {
 
     
 /* About us */
-.main-info div{
-    margin-top: 0;
+      
+.container-nosotros{
     width: 100%;
-    height: 500px;
-    display: inline-block;
-    padding:1.5rem 1.5rem ;
-    border-radius: 20px;
+    max-width: 100%;
+    min-height: 500px;
+    margin: 80px auto;
+    
+    display: flex;
+    justify-content: center;
     align-items: center;
+    background: url("../img/spartafit.jpg") no-repeat center;
+    background-size: cover;
     
-    position: relative;
+    
 
-    .main-img{
-        width: 40%;
-    
-    
-        
-    
-           
-    }  
 
-    &.main-info{
-        width: 50%; 
-        height: 50;
-        
-        
-        h1{
-            text-align: center;
-            font-size: 40px;
-            color: rgb(255, 217, 0);
-            
-            
-        }  
-        p{
-            font-size: 1.2rem;
-            color: #000;
-        }
-    }
-    
-   
-        
+    .element{
+        color: rgb(255, 255, 255);
+        text-align: center;
+        width: 100%;
+        height: 600px;
+        z-index:5 ;
+      }
+    h1{
+        font-size: 4rem;
+        font-family: 'Bellefair', serif;
+      }
+      p{
+        font-size: 1.4rem;
+      }
+
+      
+      
 }
 
 /* Clients */
@@ -215,23 +208,10 @@ footer{
         background-position: center;
     }
 
-    .main-info{
+    .container-nosotros{
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        h1{
-            font-size: 30px;
-        }
-        p{
-            font-size: 0.2rem;
-        }
-    }
-
-
-    .imagen-about-us{
-        width: 40%;
-    }
+        background-position: center;
+      }
 
     /* Clientes */
 
@@ -283,23 +263,20 @@ footer{
 
     /* ABOUT US */
 
-    .main-info{
-        flex-direction: columns;
-        justify-content: center;
-        align-items: center;
+    .element{
+        color: rgb(0, 0, 0);
         text-align: center;
+        width: 100%;
+        height: 300px;
+    
         h1{
-            font-size: 30px;
+            font-size: 1.5rem;
+          }
+          p{
+            font-size: 1rem;
+          }
+          
         }
-        p{
-            font-size: 0.1rem;
-        }
-    }
-
-    .main-img{
-        width: 30%;
-    }
-
 
     /* Clients */
 

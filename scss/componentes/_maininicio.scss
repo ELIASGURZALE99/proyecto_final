@@ -22,19 +22,31 @@
     left: 50%;
     transform: translate(-50%, -50%);
     h1{
+        font-family: 'Bellefair', serif;
         font-size: 3rem;
         font-weight: bold;
     }
     p{
-        font-size: 0.8rem;
+        font-size: 1rem;
         font-weight: normal;
     }
-    button{
-        background: rgba(194, 129, 8, 0.637);
+    .btn{
+        width: 260px;
+        height: 80px;
+        padding: 0.5rem 1rem;
+        background-color: orange;
+        color: #fff;
+        font-size: 1.1rem;
         border: none;
-        padding: 0.9rem 3rem;
-        margin: 3rem;
-        color: white;
+        outline: none;
+        cursor: pointer;
+        transition: .3s;
+    }
+    
+    .btn:hover{
+        background-color:orange;
+        font-size: 1.6rem ;
+        
         
     }
 

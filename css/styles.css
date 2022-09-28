@@ -1,212 +1,217 @@
-* {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  text-decoration: none;
-  box-sizing: border-box; }
+.contenedor {
+  padding: 60px 0;
+  width: 90%;
+  max-width: 2500px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0; }
 
-body {
-  font-family: sans-serif;
-  color: white;
-  height: 100vh;
-  overflow: hidden; }
-
-nav {
-  background: rgba(0, 0, 0, 0.425);
-  height: 100px;
-  width: 100%;
-  padding: 0 50px;
-  box-shadow: 0px 3px 10px rgbrgba(0, 0, 0, 0.137);
-  z-index: 3; }
-  nav img {
-    height: 120px;
-    width: 120px; }
-  nav ul {
-    float: right;
-    margin-right: 20px; }
-    nav ul li {
-      display: inline-block;
-      line-height: 80px;
-      margin: 0 15px; }
-      nav ul li a {
-        color: white;
-        font-size: 17px;
-        text-transform: uppercase;
-        padding: 7px 13px;
-        border-radius: 3px; }
-      nav ul li a:hover {
-        color: orange;
-        transition: 0.5s;
-        font-size: 25px; }
-  nav .checkbtn {
-    font-size: 30px;
-    color: white;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
-    display: none; }
-  nav #check {
-    display: none; }
-  @media (max-width: 952px) {
-    nav a {
-      font-size: 16px; } }
-  @media (max-width: 858px) {
-    nav .checkbtn {
-      display: block; }
-    nav ul {
-      position: fixed;
-      width: 100%;
-      height: 100vh;
-      background: #fa9109;
-      top: 80px;
-      left: -100%;
-      text-align: center;
-      transition: all 0.5;
-      z-index: 2; }
-      nav ul li {
-        display: block;
-        margin: 50px 0;
-        line-height: 30px; }
-        nav ul li a {
-          font-size: 28px; }
-        nav ul li a:hover {
-          background: none;
-          color: lightcoral; }
-    nav #check:checked ~ ul {
-      left: 0; } }
-
-.background {
-  position: relative;
-  height: 100vh; }
-  .background video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -2; }
-
-#container {
-  position: absolute;
+.titulo {
+  color: orange;
+  font-size: 40px;
   text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
-  #container h1 {
-    font-size: 3rem;
-    font-weight: bold; }
-  #container p {
-    font-size: 0.8rem;
-    font-weight: normal; }
-  #container button {
-    background: rgba(194, 129, 8, 0.637);
-    border: none;
-    padding: 0.9rem 3rem;
-    margin: 3rem;
-    color: white; }
+  margin-bottom: 60px; }
+
+/* Header */
+header {
+  width: 100%;
+  height: 500px;
+  background: linear-gradient(90deg, #fcff9e 0%, #c67700 100%);
+  position: relative;
+  top: -30px; }
+  header .textos-header {
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center; }
+    header .textos-header h1 {
+      font-size: 50px;
+      color: #fff; }
+    header .textos-header h2 {
+      font-size: 30px;
+      font-weight: 300;
+      color: #fff; }
+  header.wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%; }
 
 .container {
-  position: relative;
   width: 100%;
-  height: 100%;
+  max-width: 100%;
+  min-height: 500px;
+  margin: 80px auto;
+  border: 3px solid #000;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 60px;
-  z-index: 10; }
-
-.container:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
   background: url("../img/spartafit.jpg") no-repeat center;
   background-size: cover;
-  filter: blur(50px);
-  z-index: -1; }
+  z-index: -2; }
+  .container .element {
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 600px;
+    z-index: 5; }
+  .container h1 {
+    font-size: 4rem; }
+  .container p {
+    font-size: 1.4rem; }
 
-.contact-box {
-  max-width: 800px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: center;
+.cards {
+  display: flex;
+  justify-content: space-evenly; }
+
+.cards .card {
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  display: flex;
+  width: 46%;
+  height: 200px;
   align-items: center;
-  text-align: center;
-  background-color: #000000;
-  box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
-  position: absolute;
-  top: 20px; }
+  justify-content: space-evenly;
+  border-radius: 5px;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6); }
 
-.left {
-  background: url("../img/spartafit.jpg") no-repeat center;
-  background-size: cover;
-  height: 100%; }
+.cards .card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  display: block; }
 
-.right {
-  padding: 25px 40px; }
+.cards .card > .contenido-texto-card {
+  width: 60%;
+  color: #fff; }
 
-h2 {
-  font-size: 50px;
-  font-family: 'Bellefair', serif;
-  font-weight: 400;
-  margin-bottom: 70px;
-  text-transform: uppercase;
-  position: relative;
-  padding: 0 0 10px;
+.cards .card > .contenido-texto-card p {
+  font-weight: 300;
+  padding-top: 5px; }
+
+/*  Our team */
+.about-services {
+  background: #f2f2f2;
+  padding-bottom: 30px; }
+
+.servicio-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.servicio-ind {
+  width: 28%;
+  text-align: center; }
+
+.servicio-ind img {
+  width: 90%; }
+
+.servicio-ind h3 {
+  margin: 10px 0; }
+
+.servicio-ind p {
+  font-weight: 300;
+  text-align: justify; }
+
+/* footer */
+footer {
+  background: linear-gradient(90deg, #fcff9e 0%, #c67700 100%);
+  padding: 60px 0 30px 0;
+  margin: auto;
+  overflow: hidden; }
+
+.contenedor-footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  margin: auto;
+  padding-bottom: 50px;
+  border-bottom: 1px solid black; }
+
+.content-foo {
+  text-align: center; }
+
+.content-foo h4 {
+  color: black;
+  border-bottom: 5px solid #fccf07;
+  padding-bottom: 8px;
   margin-bottom: 10px; }
 
-h2:after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  height: 4px;
-  width: 50px;
-  border-radius: 2px;
-  background-color: orange; }
+.content-foo p {
+  color: black; }
 
-.field {
-  width: 100%;
-  border: 2px solid rgba(0, 0, 0, 0);
-  outline: none;
-  background-color: white;
-  padding: 0.5rem 1rem;
-  font-size: 1.1rem;
-  margin-bottom: 22px;
-  transition: .3s; }
+.titulo-final {
+  text-align: center;
+  font-size: 24px;
+  margin: 20px 0 0 0;
+  color: #000000; }
 
-.field:hover {
-  background-color: rgba(255, 255, 255, 0.719); }
+@media screen and (max-width: 900px) {
+  header {
+    background-position: center; }
+  .container-nosotros {
+    flex-direction: column; }
+  /* Clientes */
+  .cards {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .cards .card {
+    width: 90%; }
+  .cards .card:first-child {
+    margin-bottom: 30px; }
+  /* servicios */
+  .servicio-cont {
+    justify-content: center;
+    flex-direction: column; }
+  .servicio-ind {
+    width: 100%;
+    text-align: center; }
+  .servicio-ind:nth-child(1), .servicio-ind:nth-child(2) {
+    margin-bottom: 60px; }
+  .servicio-ind img {
+    width: 90%; } }
 
-textarea {
-  min-height: 150px; }
-
-.btn {
-  width: 100%;
-  padding: 0.5rem 1rem;
-  background-color: orange;
-  color: #fff;
-  font-size: 1.1rem;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  transition: .3s; }
-
-.btn:hover {
-  background-color: orange;
-  font-size: 1.6rem; }
-
-.field:focus {
-  border: 2px solid orange;
-  background-color: white; }
-
-@media screen and (max-width: 880px) {
-  .contact-box {
-    grid-template-columns: 1fr; }
-  .left {
-    height: 200px; } }
+@media screen and (max-width: 500px) {
+  .textos-header h1 {
+    font-size: 35px; }
+  .textos-header h2 {
+    font-size: 20px; }
+  /* ABOUT US */
+  .element {
+    color: black;
+    text-align: center;
+    width: 100%;
+    height: 300px; }
+    .element h1 {
+      font-size: 1.5rem; }
+    .element p {
+      font-size: 1rem; }
+  /* Clients */
+  .cards .card {
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .cards .card img {
+    width: 90px;
+    height: 90px; }
+  /* Footer */
+  .contenedor-footer {
+    flex-direction: column;
+    border: none; }
+  .content-foo {
+    margin-bottom: 20px;
+    text-align: center; }
+  .content-foo h4 {
+    border: none; }
+  .content-foo p {
+    color: black;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 20px; }
+  .titulo-final {
+    font-size: 20px; } }

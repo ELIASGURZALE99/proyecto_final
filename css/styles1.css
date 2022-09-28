@@ -23,6 +23,7 @@ nav {
       top: 12px; }
       nav ul li a {
         color: white;
+        font-family: 'Bellefair', serif;
         font-size: 17px;
         text-transform: uppercase;
         padding: 7px 13px;
@@ -89,17 +90,29 @@ nav {
   left: 50%;
   transform: translate(-50%, -50%); }
   #container h1 {
+    font-family: 'Bellefair', serif;
     font-size: 3rem;
     font-weight: bold; }
   #container p {
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: normal; }
-  #container button {
-    background: rgba(194, 129, 8, 0.637);
+  #container .btn {
+    width: 260px;
+    height: 80px;
+    padding: 0.5rem 1rem;
+    background-color: orange;
+    color: #fff;
+    font-size: 1.1rem;
     border: none;
-    padding: 0.9rem 3rem;
-    margin: 3rem;
-    color: white; }
+    outline: none;
+    cursor: pointer;
+    transition: .3s; }
+  #container .btn:hover {
+    background-color: orange;
+    font-size: 1.6rem; }
+
+.contac-body {
+  background-color: #faa913; }
 
 .container {
   position: relative;
@@ -110,19 +123,7 @@ nav {
   align-items: center;
   padding: 10px 60px;
   z-index: 10;
-  top: 55px; }
-
-.container:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background: url("../img/spartafit.jpg") no-repeat center;
-  background-size: cover;
-  filter: blur(20px);
-  z-index: -1; }
+  top: 85px; }
 
 .contact-box {
   max-width: 800px;
@@ -208,7 +209,7 @@ textarea {
 
 .contenedor {
   padding: 60px 0;
-  width: 90%;
+  width: 100%;
   max-width: 100%;
   margin: auto;
   overflow: hidden; }
@@ -246,43 +247,49 @@ header {
     bottom: 0;
     width: 100%; }
 
-/* About us */
-.main-info div {
-  margin-top: 0;
+/* nutricion-main*/
+.container-nutricion {
   width: 100%;
-  height: 500px;
-  display: inline-block;
-  padding: 1.5rem 1.5rem;
-  border-radius: 20px;
+  max-width: 100%;
+  min-height: 500px;
+  margin: 80px auto;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  position: relative; }
-  .main-info div .main-img {
-    width: 20%; }
-  .main-info div.main-info {
-    width: 50%;
-    height: 50; }
-    .main-info div.main-info h1 {
-      text-align: center;
-      font-size: 40px;
-      color: #ffd900; }
-    .main-info div.main-info p {
-      font-size: 1.2rem;
-      color: #000; }
+  background: url("../img/alimentacion1.jpg") no-repeat center;
+  background-size: cover; }
+  .container-nutricion .element {
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 600px;
+    z-index: 5; }
+  .container-nutricion h1 {
+    font-size: 4rem; }
+  .container-nutricion p {
+    font-size: 2.1rem; }
 
-h1 span {
-  color: orange; }
-
-p {
-  margin: 0; }
+.titulo-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(90deg, #fcff9e 0%, #c67700 100%);
+  font-size: 35px; }
+  .titulo-card h4 {
+    color: orange;
+    text-align: center; }
 
 .cards-grid {
   display: flex;
   grid-gap: 80px;
-  padding-bottom: 60px;
+  padding-bottom: 20px;
+  justify-content: center;
   /* FLIP CARD */ }
   .cards-grid .flip-card {
-    width: 320px;
-    height: 400px;
+    width: 250px;
+    height: 340px;
     perspective: 2000px; }
   .cards-grid .flip-card-inner {
     position: relative;
@@ -323,7 +330,7 @@ footer {
 
 .contenedor-footer {
   display: flex;
-  width: 90%;
+  width: 100%;
   justify-content: space-evenly;
   margin: auto;
   padding-bottom: 50px;
@@ -347,7 +354,16 @@ footer {
   margin: 20px 0 0 0;
   color: #000000; }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1100px) {
+  header {
+    background-position: center; }
+  .cards-grid {
+    width: 550px;
+    grid-gap: 25px;
+    justify-content: center; }
+    .cards-grid .flip-card {
+      width: 250px;
+      height: 250px; }
   header {
     background-position: center; }
   .contenedor-sobre-nosotros {
@@ -355,9 +371,7 @@ footer {
     justify-content: center;
     align-items: center; }
   .sobre-nosotros .contenido-textos {
-    width: 90%; }
-  .imagen-about-us {
-    width: 90%; }
+    width: 100%; }
   /* Footer */
   .contenedor-footer {
     flex-direction: column;
@@ -374,10 +388,40 @@ footer {
   .titulo-final {
     font-size: 20px; } }
 
+@media screen and (max-width: 500px) {
+  .textos-header h1 {
+    font-size: 35px; }
+  .textos-header h2 {
+    font-size: 20px; }
+  .cards-grid {
+    width: 400px;
+    flex-direction: column;
+    grid-gap: 15px;
+    justify-content: center;
+    align-items: center;
+    /* Footer */ }
+    .cards-grid .flip-card {
+      width: 280px;
+      height: 290px; }
+    .cards-grid .contenedor-footer {
+      flex-direction: column;
+      border: none; }
+    .cards-grid .content-foo {
+      margin-bottom: 20px;
+      text-align: center; }
+    .cards-grid .content-foo h4 {
+      border: none; }
+    .cards-grid .content-foo p {
+      color: black;
+      border-bottom: 1px solid #000000;
+      padding-bottom: 20px; }
+    .cards-grid .titulo-final {
+      font-size: 20px; } }
+
 .contenedor {
   padding: 60px 0;
   width: 90%;
-  max-width: 1000px;
+  max-width: 2500px;
   margin: auto;
   overflow: hidden;
   padding: 0; }
@@ -416,27 +460,27 @@ header {
     width: 100%; }
 
 /* About us */
-.main-info div {
-  margin-top: 0;
+.container-nosotros {
   width: 100%;
-  height: 500px;
-  display: inline-block;
-  padding: 1.5rem 1.5rem;
-  border-radius: 20px;
+  max-width: 100%;
+  min-height: 500px;
+  margin: 80px auto;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  position: relative; }
-  .main-info div .main-img {
-    width: 40%; }
-  .main-info div.main-info {
-    width: 50%;
-    height: 50; }
-    .main-info div.main-info h1 {
-      text-align: center;
-      font-size: 40px;
-      color: #ffd900; }
-    .main-info div.main-info p {
-      font-size: 1.2rem;
-      color: #000; }
+  background: url("../img/spartafit.jpg") no-repeat center;
+  background-size: cover; }
+  .container-nosotros .element {
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 600px;
+    z-index: 5; }
+  .container-nosotros h1 {
+    font-size: 4rem;
+    font-family: 'Bellefair', serif; }
+  .container-nosotros p {
+    font-size: 1.4rem; }
 
 /* Clients */
 .cards {
@@ -530,17 +574,9 @@ footer {
 @media screen and (max-width: 900px) {
   header {
     background-position: center; }
-  .main-info {
+  .container-nosotros {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center; }
-    .main-info h1 {
-      font-size: 30px; }
-    .main-info p {
-      font-size: 0.2rem; }
-  .imagen-about-us {
-    width: 40%; }
+    background-position: center; }
   /* Clientes */
   .cards {
     flex-direction: column;
@@ -568,17 +604,15 @@ footer {
   .textos-header h2 {
     font-size: 20px; }
   /* ABOUT US */
-  .main-info {
-    flex-direction: columns;
-    justify-content: center;
-    align-items: center;
-    text-align: center; }
-    .main-info h1 {
-      font-size: 30px; }
-    .main-info p {
-      font-size: 0.1rem; }
-  .main-img {
-    width: 30%; }
+  .element {
+    color: black;
+    text-align: center;
+    width: 100%;
+    height: 300px; }
+    .element h1 {
+      font-size: 1.5rem; }
+    .element p {
+      font-size: 1rem; }
   /* Clients */
   .cards .card {
     height: 450px;
@@ -588,6 +622,141 @@ footer {
   .cards .card img {
     width: 90px;
     height: 90px; }
+  /* Footer */
+  .contenedor-footer {
+    flex-direction: column;
+    border: none; }
+  .content-foo {
+    margin-bottom: 20px;
+    text-align: center; }
+  .content-foo h4 {
+    border: none; }
+  .content-foo p {
+    color: black;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 20px; }
+  .titulo-final {
+    font-size: 20px; } }
+
+nav {
+  background: rgba(0, 0, 0, 0.425);
+  height: 108px;
+  width: 100%;
+  box-shadow: 0px 3px 10px rgbrgba(0, 0, 0, 0.137);
+  z-index: 20;
+  position: fixed;
+  top: -1px; }
+  nav img {
+    height: 120px;
+    width: 120px;
+    position: relative;
+    left: 15px;
+    top: 2px; }
+  nav ul {
+    float: right;
+    margin-right: 20px; }
+    nav ul li {
+      display: inline-block;
+      line-height: 80px;
+      margin: 0 15px;
+      position: relative;
+      top: 12px; }
+      nav ul li a {
+        color: white;
+        font-size: 17px;
+        text-transform: uppercase;
+        padding: 7px 13px;
+        border-radius: 3px;
+        text-decoration: none; }
+      nav ul li a:hover {
+        color: orange;
+        transition: 0.5s;
+        font-size: 25px; }
+  nav .checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none; }
+  nav #check {
+    display: none; }
+  @media (max-width: 952px) {
+    nav a {
+      font-size: 16px; } }
+  @media (max-width: 858px) {
+    nav .checkbtn {
+      display: block; }
+    nav ul {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #fa9109;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all 0.5;
+      z-index: 2; }
+      nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px; }
+        nav ul li a {
+          font-size: 28px; }
+        nav ul li a:hover {
+          background: none;
+          color: lightcoral; }
+    nav #check:checked ~ ul {
+      left: 0; } }
+
+.main-tienda {
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+  .main-tienda .img-tienda1 {
+    width: 700px;
+    height: 600px; }
+  .main-tienda .img-tienda2 {
+    width: 700px;
+    height: 600px; }
+
+@media screen and (max-width: 1100px) {
+  header {
+    background-position: center; }
+  .contenedor-sobre-nosotros {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .sobre-nosotros .contenido-textos {
+    width: 100%; }
+  /* Footer */
+  .contenedor-footer {
+    flex-direction: column;
+    border: none; }
+  .content-foo {
+    margin-bottom: 20px;
+    text-align: center; }
+  .content-foo h4 {
+    border: none; }
+  .content-foo p {
+    color: black;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 20px; }
+  .titulo-final {
+    font-size: 20px; } }
+
+@media screen and (max-width: 500px) {
+  .textos-header h1 {
+    font-size: 35px; }
+  .textos-header h2 {
+    font-size: 20px; }
+  .main-tienda {
+    justify-content: center;
+    width: 800px;
+    flex-direction: column; }
+  .tienda-img1 {
+    width: 400px; }
   /* Footer */
   .contenedor-footer {
     flex-direction: column;
