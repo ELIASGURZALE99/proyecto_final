@@ -1,7 +1,7 @@
 
-  
+  @import 'componentes/variables';
  .contac-body{
-    background-color: rgb(250, 169, 19);
+    background-color: $spartayellow;
 
  }
  
@@ -52,7 +52,7 @@
 
 h2{
     font-size: 50px;
-    font-family: 'Bellefair', serif;
+    font-family: $letrasparta;
      font-weight: 400;
     margin-bottom: 70px;
     text-transform: uppercase;
@@ -95,7 +95,7 @@ textarea{
 .btn{
     width: 100%;
     padding: 0.5rem 1rem;
-    background-color: orange;
+    background-color: $spartayellow;
     color: #fff;
     font-size: 1.1rem;
     border: none;

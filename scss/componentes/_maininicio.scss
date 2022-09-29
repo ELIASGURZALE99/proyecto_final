@@ -1,3 +1,5 @@
+@import 'componentes/variables';
+
 .background{
     position: relative;
     height: 100vh;
@@ -22,7 +24,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     h1{
-        font-family: 'Bellefair', serif;
+        font-family: $letrasparta;
         font-size: 3rem;
         font-weight: bold;
     }

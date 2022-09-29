@@ -1,5 +1,5 @@
 
-
+@import 'componentes/variables';
 nav{
     background: rgba(0, 0, 0, 0.425);
     height: 108px;
@@ -101,25 +101,10 @@ nav{
         
     }
 }
+ .container-tienda{
+    background: $spartayellow;
 
-
-.main-tienda{
-    width: 100%;
-    display: flex;
- justify-content: center;
-
- .img-tienda1{
-    width: 700px;
-    height: 600px;
  }
-
- .img-tienda2{
-    width: 700px;
-    height: 600px;
- }
-
-
-}
 
 
 
@@ -131,45 +116,9 @@ nav{
            background-position: center;
        }
    
-       .contenedor-sobre-nosotros{
-           flex-direction: column;
-           justify-content: center;
-           align-items: center;
-       }
-   
-       .sobre-nosotros .contenido-textos{
-           width: 100%;
-       }
-   
       
    
-       /* Footer */
-   
-       .contenedor-footer{
-           flex-direction: column;
-           border: none;
-          
-           
-       }
-   
-       .content-foo{
-           margin-bottom: 20px;
-           text-align: center;
-       }
-   
-       .content-foo h4{
-           border: none;
-       }
-   
-       .content-foo p{
-           color: rgb(0, 0, 0);
-           border-bottom: 1px solid #000000;
-           padding-bottom: 20px;
-       }
-   
-       .titulo-final{
-           font-size: 20px;
-       }
+      
    
    
    
@@ -189,19 +138,6 @@ nav{
        .textos-header h2{
            font-size: 20px;
        }
-
-       .main-tienda{
-        justify-content: center;
-        width:800px;
-        flex-direction: column;
-       }
-
-       .tienda-img1{
-        width: 400px;
-       }
-   
-   
-       
     
        /* Footer */
    
@@ -221,8 +157,8 @@ nav{
        }
    
        .content-foo p{
-           color: rgb(0, 0, 0);
-           border-bottom: 1px solid #000000;
+           color: rgb(255, 255, 255);
+           border-bottom: 1px $spartayellow;
            padding-bottom: 20px;
        }
    

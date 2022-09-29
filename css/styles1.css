@@ -90,7 +90,7 @@ nav {
   left: 50%;
   transform: translate(-50%, -50%); }
   #container h1 {
-    font-family: 'Bellefair', serif;
+    font-family: "Bellefair", serif;
     font-size: 3rem;
     font-weight: bold; }
   #container p {
@@ -147,7 +147,7 @@ nav {
 
 h2 {
   font-size: 50px;
-  font-family: 'Bellefair', serif;
+  font-family: "Bellefair", serif;
   font-weight: 400;
   margin-bottom: 70px;
   text-transform: uppercase;
@@ -185,7 +185,7 @@ textarea {
 .btn {
   width: 100%;
   padding: 0.5rem 1rem;
-  background-color: orange;
+  background-color: #faa913;
   color: #fff;
   font-size: 1.1rem;
   border: none;
@@ -372,21 +372,33 @@ footer {
     align-items: center; }
   .sobre-nosotros .contenido-textos {
     width: 100%; }
-  /* Footer */
+  /* footer */
+  footer {
+    background: black;
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden; }
   .contenedor-footer {
-    flex-direction: column;
-    border: none; }
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid white; }
   .content-foo {
-    margin-bottom: 20px;
     text-align: center; }
   .content-foo h4 {
-    border: none; }
+    color: white;
+    border-bottom: 5px solid #faa913;
+    padding-bottom: 8px;
+    margin-bottom: 10px; }
   .content-foo p {
-    color: black;
-    border-bottom: 1px solid #000000;
-    padding-bottom: 20px; }
+    color: #faa913; }
   .titulo-final {
-    font-size: 20px; } }
+    text-align: center;
+    font-size: 24px;
+    margin: 25px 0 0 0;
+    color: white; } }
 
 @media screen and (max-width: 500px) {
   .textos-header h1 {
@@ -412,8 +424,8 @@ footer {
     .cards-grid .content-foo h4 {
       border: none; }
     .cards-grid .content-foo p {
-      color: black;
-      border-bottom: 1px solid #000000;
+      color: white;
+      border-bottom: 1px solid #faa913;
       padding-bottom: 20px; }
     .cards-grid .titulo-final {
       font-size: 20px; } }
@@ -478,7 +490,7 @@ header {
     z-index: 5; }
   .container-nosotros h1 {
     font-size: 4rem;
-    font-family: 'Bellefair', serif; }
+    font-family: "Bellefair", serif; }
   .container-nosotros p {
     font-size: 1.4rem; }
 
@@ -540,7 +552,7 @@ header {
 
 /* footer */
 footer {
-  background: linear-gradient(90deg, #fcff9e 0%, #c67700 100%);
+  background: black;
   padding: 60px 0 30px 0;
   margin: auto;
   overflow: hidden; }
@@ -551,25 +563,25 @@ footer {
   justify-content: space-evenly;
   margin: auto;
   padding-bottom: 50px;
-  border-bottom: 1px solid black; }
+  border-bottom: 1px solid white; }
 
 .content-foo {
   text-align: center; }
 
 .content-foo h4 {
-  color: black;
-  border-bottom: 5px solid #fccf07;
+  color: white;
+  border-bottom: 5px solid #faa913;
   padding-bottom: 8px;
   margin-bottom: 10px; }
 
 .content-foo p {
-  color: black; }
+  color: #faa913; }
 
 .titulo-final {
   text-align: center;
   font-size: 24px;
-  margin: 20px 0 0 0;
-  color: #000000; }
+  margin: 25px 0 0 0;
+  color: white; }
 
 @media screen and (max-width: 900px) {
   header {
@@ -630,10 +642,11 @@ footer {
     margin-bottom: 20px;
     text-align: center; }
   .content-foo h4 {
-    border: none; }
+    color: white;
+    border-bottom: 5px solid #faa913; }
   .content-foo p {
-    color: black;
-    border-bottom: 1px solid #000000;
+    color: white;
+    border-bottom: 1px solid #faa913;
     padding-bottom: 20px; }
   .titulo-final {
     font-size: 20px; } }
@@ -710,53 +723,18 @@ nav {
     nav #check:checked ~ ul {
       left: 0; } }
 
-.main-tienda {
-  width: 100%;
-  display: flex;
-  justify-content: center; }
-  .main-tienda .img-tienda1 {
-    width: 700px;
-    height: 600px; }
-  .main-tienda .img-tienda2 {
-    width: 700px;
-    height: 600px; }
+.container-tienda {
+  background: #faa913; }
 
 @media screen and (max-width: 1100px) {
   header {
-    background-position: center; }
-  .contenedor-sobre-nosotros {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-  .sobre-nosotros .contenido-textos {
-    width: 100%; }
-  /* Footer */
-  .contenedor-footer {
-    flex-direction: column;
-    border: none; }
-  .content-foo {
-    margin-bottom: 20px;
-    text-align: center; }
-  .content-foo h4 {
-    border: none; }
-  .content-foo p {
-    color: black;
-    border-bottom: 1px solid #000000;
-    padding-bottom: 20px; }
-  .titulo-final {
-    font-size: 20px; } }
+    background-position: center; } }
 
 @media screen and (max-width: 500px) {
   .textos-header h1 {
     font-size: 35px; }
   .textos-header h2 {
     font-size: 20px; }
-  .main-tienda {
-    justify-content: center;
-    width: 800px;
-    flex-direction: column; }
-  .tienda-img1 {
-    width: 400px; }
   /* Footer */
   .contenedor-footer {
     flex-direction: column;
@@ -767,8 +745,8 @@ nav {
   .content-foo h4 {
     border: none; }
   .content-foo p {
-    color: black;
-    border-bottom: 1px solid #000000;
+    color: white;
+    border-bottom: 1px #faa913;
     padding-bottom: 20px; }
   .titulo-final {
     font-size: 20px; } }
