@@ -111,6 +111,41 @@ nav {
     background-color: orange;
     font-size: 1.6rem; }
 
+.follow {
+  display: flex;
+  margin: 50px 90px 0 0;
+  margin-top: -150px;
+  justify-content: center;
+  text-align: center; }
+
+.follow .icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+
+.follow .icon li {
+  list-style: none;
+  padding-left: 35px; }
+
+.follow .icon li i {
+  font-size: 1.6em;
+  width: 50px;
+  height: 50px;
+  background: black;
+  border-radius: 50%;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  transition: 0.3; }
+
+.follow .icon li i:hover {
+  color: white;
+  background: #faa913;
+  transform: rotate(100deg);
+  cursor: pointer; }
+
 .contac-body {
   background-color: #faa913; }
 
