@@ -310,7 +310,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover; }
   .cards-grid .flip-card-back {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     text-align: center;
     display: grid;
     place-items: center;
@@ -364,6 +364,8 @@ footer {
     .cards-grid .flip-card {
       width: 250px;
       height: 250px; }
+    .cards-grid .flip-card-back {
+      font-size: 0.9rem; }
   header {
     background-position: center; }
   .contenedor-sobre-nosotros {
